@@ -1,4 +1,4 @@
-# Conditionals Practice
+# Objects as Arguments Practice
 
 ## Set up:
 1. `clone` down the repo
