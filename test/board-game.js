@@ -32,6 +32,11 @@ describe('boardGame', function() {
     assert.equal(azul.rating, 10);
   });
 
+  it.skip('can have a different rating for different games', function() {
+    var monopoly = new BoardGame({ name: 'Monopoly', rating: 6 });
+    assert.equal(monopoly.rating, 6);
+  });
+
 
   it.skip('has a minimum number of required players', function() {
     // HINT: which name should the class have and which name does the object argument have?
