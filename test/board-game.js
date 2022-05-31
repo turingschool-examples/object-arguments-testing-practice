@@ -3,17 +3,17 @@ const assert = chai.assert;
 const BoardGame = require('../src/BoardGame');
 
 describe('boardGame', function() {
-  it('should be an instance of BoardGame', function() {
+  it.skip('should be an instance of BoardGame', function() {
     var boardGame = new BoardGame({ name: 'Candyland' });
     assert.instanceOf(boardGame, BoardGame);
   });
 
-  it('has a name', function() {
+  it.skip('has a name', function() {
     var boardGame = new BoardGame({ name: 'Ticket To Ride' });
     assert.equal(boardGame.name, 'Ticket To Ride');
   });
 
-  it('can have a different name', function() {
+  it.skip('can have a different name', function() {
     // these naming conventions are awful, but they're like this to avoid potentially confusing naming at this level
     var boardGame1 = new BoardGame({ name: 'Onitama' });
     assert.equal(boardGame1.name, 'Onitama');
@@ -27,13 +27,13 @@ describe('boardGame', function() {
     assert.equal(boardGame5.name, 'Monopoly');
   });
 
-  it('has a rating', function() {
+  it.skip('has a rating', function() {
     var azul = new BoardGame({ name: 'Azul', rating: 10 });
     assert.equal(azul.rating, 10);
   });
 
 
-  it('has a minimum number of required players', function() {
+  it.skip('has a minimum number of required players', function() {
     // HINT: which name should the class have and which name does the object argument have?
     var azul = new BoardGame({ name: 'Azul', rating: 10 , minPlayers: 2 });
     assert.equal(azul.minimumPlayers, 2);
@@ -41,7 +41,7 @@ describe('boardGame', function() {
     assert.equal(carcassonne.minimumPlayers, 2);
   });
 
-  it('has a maximum number of possible players', function() {
+  it.skip('has a maximum number of possible players', function() {
     // HINT: which name should the class have and which name does the object argument have?
     var azul = new BoardGame({ name: 'Azul', rating: 10 , minPlayers: 2 , maxPlayers: 4 });
     assert.equal(azul.maximumPlayers, 4)
@@ -50,14 +50,14 @@ describe('boardGame', function() {
     assert.equal(carcassonne.maximumPlayers, 5);
   });
 
-  it('can be played', function() {
+  it.skip('can be played', function() {
     var azul = new BoardGame({ name: 'Azul', rating: 10 , minPlayers: 2 , maxPlayers: 4, played: false });
     assert.equal(azul.played, false);
     azul.play();
     assert.equal(azul.played, true);
   });
 
-  it("should only be played if it's rating is 10 because the players are picky", function() {
+  it.skip("should only be played if it's rating is 10 because the players are picky", function() {
     var azul = new BoardGame({ name: 'Azul', rating: 10 , minPlayers: 2 , maxPlayers: 4, played: false });
     assert.equal(azul.played, false);
     azul.play();
