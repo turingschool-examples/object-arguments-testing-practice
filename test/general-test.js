@@ -44,9 +44,9 @@ describe('general challenges', function() {
       var filteredReadingScores = filterScores('reading', scores);
       var filteredScienceScores = filterScores('science', scores);
       var filteredMathScores = filterScores('math', scores);
-      assert.deepEqual(filteredReadingScores, [57, 75, 90, 37, 82, 85, 96, 100, 97, 64, 63, 49]);
-      assert.deepEqual(filteredScienceScores, [70, 37, 83, 99, 100, 100, 98, 51, 83, 71, 40, 55]);
-      assert.deepEqual(filteredMathScores, [70, 71, 40, 55, 37, 83, 99, 100, 100, 98, 51, 83]);
+      assert.deepEqual(filteredReadingScores, [75, 90, 82, 85, 96, 100, 97, ]);
+      assert.deepEqual(filteredScienceScores, [70, 83, 99, 100, 100, 98, 83, 71]);
+      assert.deepEqual(filteredMathScores, [70, 71, 83, 99, 100, 100, 98, 83]);
     });
   });
 
