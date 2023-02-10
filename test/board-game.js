@@ -9,7 +9,7 @@ describe('boardGame', function() {
   });
 
   it.skip('has a name', function() {
-    var boardGame = new BoardGame({ name: 'Ticket To Ride' });
+    var boardGame = new BoardGame({ name: 'Ticket To Ride' }); // ONE ARGUMENT (object)
     assert.equal(boardGame.name, 'Ticket To Ride');
   });
 
@@ -42,6 +42,8 @@ describe('boardGame', function() {
     // HINT: which name should the class have and which name does the object argument have?
     var azul = new BoardGame({ name: 'Azul', rating: 10 , minPlayers: 2 });
     assert.equal(azul.minimumPlayers, 2);
+    //"There should be a property called minimumPlayers and it should have a value of 2"
+    // the assertion is telling you what the property name should be in the Class
     var carcassonne = new BoardGame({ name: 'Carcassonne' , minPlayers: 2});
     assert.equal(carcassonne.minimumPlayers, 2);
   });
@@ -67,7 +69,7 @@ describe('boardGame', function() {
     assert.equal(azul.played, false);
     azul.play();
     assert.equal(azul.played, true);
-    var monopoly = new BoardGame({ name: 'monopoly', played: false });
+    var monopoly = new BoardGame({ name: 'monopoly', rating: 5, played: false });
     assert.equal(monopoly.played, false);
     monopoly.play();
     assert.equal(monopoly.played, false);
